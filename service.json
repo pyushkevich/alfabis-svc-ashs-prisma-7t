@@ -1,0 +1,63 @@
+{
+  "name": "ASHS-ABC-7T",
+  "version": "1.0.0",
+  "keywords": [
+    "hippocampus",
+    "subfields",
+    "dementia",
+    "brain",
+    "mtl"
+  ],
+  "shortdesc": "Hippocampal and MTL subfield segmentation in 7 Tesla T2-MRI (2022 version)",
+  "longdesc": "Automatic segmentation of hippocampal subfields and MTL subregions in high-resolution T2-weighted 3 Tesla MRI scans, using an atlas of older adults with and without mild cognitive impairment from the Penn Aging Brain Cohort (ABC). Segmentation protocol from Xie et al., MedIA 2022 (https://doi.org/10.1016/j.media.2022.102683)",
+  "citation": "https://doi.org/10.1016/j.media.2022.102683",
+  "url": "https://sites.google.com/view/ashs-dox/mri-data/ashs-pmc-atlas-requirements",
+  "tags": [
+    {
+      "name": "T2-MRI",
+      "type": "MainImage",
+      "hint": "A high-resolution (e.g., 0.4x0.4x2.0mm^3) T2-weighted MRI scan with oblique coronal orientation parallel to hippocampal main axis. This scan must be the main image in the workspace.",
+      "required": true
+    },
+    {
+      "name": "T1-MRI",
+      "type": "OverlayImage",
+      "hint": "Roughtly isotropic (e.g., 1x1x1mm^3) T1-weighted MRI scan of the whole brain.",
+      "required": true
+    },
+    {
+      "name": "AC",
+      "type": "PointLandmark",
+      "hint": "Anterior commissure point can be optionally specified to help align the MRI scan to the brain template.",
+      "required": false
+    },
+    {
+      "name": "PC",
+      "type": "PointLandmark",
+      "hint": "Posterior commissure point can be optionally specified to help align the MRI scan to the brain template.",
+      "required": false
+    }
+  ],
+  "parameters": [
+    {
+      "name": "corr_mode",
+      "displayname" : "Correction Mode",
+      "hint" : "ASHS offers performs segmentation error correction based on a machine learning algorithm. The 'intensity and shape correction' mode is suitable when your data closely matches the intensity characteristics of the ASHS atlas (see paper for details). Otherwise , 'shape correction' is recommended. You may also choose to disable error correction.",
+      "type" : "choose_one",
+      "choices" : [
+        {
+          "name" : "none",
+          "displayname" : "No error correction"
+        },
+        {
+          "name" : "shape",
+          "displayname" : "Shape correction"
+        },
+        {
+          "name" : "intensity",
+          "displayname" : "Intensity correction"
+        }
+        ]
+    }
+  ]
+}
