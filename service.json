@@ -8,8 +8,8 @@
     "brain",
     "mtl"
   ],
-  "shortdesc": "Hippocampal and MTL subfield segmentation in 7 Tesla T2-MRI (2022 version)",
-  "longdesc": "Automatic segmentation of hippocampal subfields and MTL subregions in high-resolution T2-weighted 3 Tesla MRI scans, using an atlas of older adults with and without mild cognitive impairment from the Penn Aging Brain Cohort (ABC). Segmentation protocol from Xie et al., MedIA 2022 (https://doi.org/10.1016/j.media.2022.102683)",
+  "shortdesc": "Hippocampal and MTL subfield segmentation in 7 Tesla T2-MRI (Berron et al., 2017 protocol)",
+  "longdesc": "Automatic segmentation of hippocampal subfields and MTL subregions in high-resolution T2-weighted 7 Tesla MRI scans, using an atlas of older adults with and without mild cognitive impairment from the UPenn ABC study segmented using the Berron et al. protocol (NeuroImage Clinical, 2017)",
   "citation": "https://doi.org/10.1016/j.media.2022.102683",
   "url": "https://sites.google.com/view/ashs-dox/mri-data/ashs-pmc-atlas-requirements",
   "tags": [
